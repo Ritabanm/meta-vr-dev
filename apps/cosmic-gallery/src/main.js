@@ -127,6 +127,12 @@ function init() {
     });
   }
 
+  // Dynamically set Quest URL banner to match current host/IP
+  const questUrlEl = document.getElementById('quest-url');
+  if (questUrlEl) {
+    questUrlEl.innerText = window.location.href;
+  }
+
   // 4. OrbitControls (Desktop)
   controls = new OrbitControls(camera, renderer.domElement);
   controls.enableDamping = true;
