@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CyberXR Cosmic Gallery - Meta Quest WebXR Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <!-- Canvas Container -->
+  <div id="canvas-container"></div>
+
+  <!-- Desktop Overlay UI -->
+  <div id="ui-overlay">
+    <header class="header-bar">
+      <div class="logo">
+        <span class="badge">WebXR</span>
+        <h1>CyberXR Cosmic Gallery</h1>
+      </div>
+      <div class="status-pill" id="xr-status">
+        <span class="dot"></span>
+        <span id="xr-status-text">WebXR Ready</span>
+      </div>
+    </header>
+
+    <!-- Planet Detail Card (Floating UI) -->
+    <div id="planet-card" class="glass-card hidden">
+      <div class="card-header">
+        <h2 id="planet-name">Cyber Planet</h2>
+        <button id="close-card-btn" class="icon-btn">&times;</button>
+      </div>
+      <p id="planet-desc">A futuristic celestial body in the CyberXR galaxy.</p>
+      <div class="stats-grid">
+        <div class="stat-box">
+          <span class="label">Radius</span>
+          <span class="value" id="stat-radius">4,800 km</span>
+        </div>
+        <div class="stat-box">
+          <span class="label">Orbit Speed</span>
+          <span class="value" id="stat-speed">1.2x</span>
+        </div>
+        <div class="stat-box">
+          <span class="label">Type</span>
+          <span class="value" id="stat-type">Hologram</span>
+        </div>
+        <div class="stat-box">
+          <span class="label">Life Sign</span>
+          <span class="valueHighlight" id="stat-life">94%</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quest 3 Connection Banner -->
+    <footer class="footer-banner">
+      <div class="quest-info">
+        <div class="icon">🥽</div>
+        <div class="text">
+          <strong>Open on Meta Quest 3:</strong>
+          <span>Type <code class="url-code" id="quest-url">http://192.168.200.3:5173</code> into your Quest Browser</span>
+        </div>
+      </div>
+      <div id="vr-btn-container"></div>
+    </footer>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

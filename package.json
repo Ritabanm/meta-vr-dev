@@ -1,0 +1,14 @@
+{
+  "name": "meta-vr-dev-monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=cosmic-gallery",
+    "build": "npm run build --workspace=cosmic-gallery",
+    "dev:cosmic": "npm run dev --workspace=cosmic-gallery"
+  }
+}
